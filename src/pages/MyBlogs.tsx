@@ -90,7 +90,7 @@ type AddBlogFormData = z.infer<typeof addBlogSchema>
             Create
           </Button>
         </DialogTrigger>
-        <DialogContent>
+        <DialogContent className="overflow-y-auto max-h-[90vh]">
           <form
             action=""
             onSubmit={handleSubmit(onSubmit)}
