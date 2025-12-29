@@ -60,9 +60,11 @@ type AddBlogFormData = z.infer<typeof addBlogSchema>
       setDialogOpen(false);
       queryClient.invalidateQueries({ queryKey: ["my-blogs"] });
     },
+    
   });
   
   const onSubmit = (data: AddBlogFormData) => {
+    if(!token) return;
     addBlog.mutate({payload: data, token})
 }
   if (isError) {

@@ -39,6 +39,7 @@ const Profile = () => {
 });
    
 const onSubmit = (formData: ProfileFormData) => {
+  if(!userId) return;
   updateUser.mutate({
     payload: formData,
     userId,

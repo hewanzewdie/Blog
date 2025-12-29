@@ -1,11 +1,11 @@
 import { api } from "../lib/axios";
 
 export interface User{
-  firstName: string;
-  lastName: string;
-  age: number;
-  address: string;
-  bio: string;
+  firstName?: string;
+  lastName?: string;
+  age?: number;
+  address?: string;
+  bio?: string;
   email: string;
   id: string;
 }
